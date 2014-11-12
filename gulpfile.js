@@ -28,8 +28,8 @@ gulp.task('scripts', function() {
 		.pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
 		// .pipe(concat('scripts.js'))
 		// .pipe(gulp.dest('dist/assets/js'))
-		.pipe(rename({suffix: '.min'}))
-		.pipe(uglify())
+		// .pipe(rename({suffix: '.min'}))
+		// .pipe(uglify())
 		.pipe(gulp.dest('dist/assets/js'))
 		// .pipe(notify({ message: 'Scripts task complete' }));
 });
