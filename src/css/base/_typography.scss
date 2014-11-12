@@ -1,0 +1,65 @@
+body {
+  color: $main;
+  font-family: $main-font;
+}
+
+// links
+a {
+	color: $accent;
+	text-decoration: none;
+	transition: 0.3s all ease-in-out;
+	position: relative;
+	&:hover {
+		color: lighten($accent, 20);
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h2 {
+	display: none;
+	@include font-size(32px);
+	margin: 0;
+}
+
+
+// paragraphs 
+p {
+	line-height: 1.5;
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+}
+
+p.date {
+	@include font-size(14px);
+	text-align: center;
+	margin: 0;
+}
+
+span.temp {
+	@include font-size(20px);
+	position: relative;
+	&:after {
+		content: '°';
+		position: absolute;
+	}
+	&.high {
+		float: left;
+		margin-left: 15%;
+	}
+	&.low {
+		float: right;
+		margin-right: 15%;
+		color: $grey;
+	}
+}
+
+span.city {
+	color: $accent;
+}

@@ -1,0 +1,17 @@
+input {
+	border: none;
+	padding: 10px;
+	border-radius: 3px;
+	color: $dark;
+	background: $main;
+	outline-color: $accent;
+}
+
+input[type="text"] {
+	@include column(6);
+	@include push(2);
+}
+
+input[type="submit"] {
+	@include column(2);
+}

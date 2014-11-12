@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather App</title>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- favicon -->
+	<link rel="icon" href="images/favicon.png" type="image/png"/>
+</head>
+<body>
+	<div class="wrapper">
+		<header><h1>Forecastr</h1></header>
+		<div id="input">
+			<form class="city" id="get-weather">
+				<input type="text" id="city" placeholder="Enter your city">
+				<input type="submit" class="button">
+			</form>
+		</div>
+		<section id="forecast" class="forecast">
+		</section>
+		<button class="button" id="change">Change City</button>
+	</div>
+		<footer>&copy; <a href="http://mattfairley.com" title="My portfolio" target="_blank">Matt Fairley</a> 2014</footer>
+	<!-- scripts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/sweet-alert.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

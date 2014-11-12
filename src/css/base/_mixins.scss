@@ -1,0 +1,55 @@
+@mixin bp($point) {
+
+// Portrait tablet and small desktops
+	@if $point == large-mobile {
+		@media (max-width: 768px) { @content; }
+	}
+//Landscape phone to portrait tablet
+	@if $point == medium-mobile {
+		@media (max-width: 620px) { @content; }
+	}
+//Landscape phones
+	@if $point == small-mobile {
+		@media (max-width: 480px) { @content; }
+	}
+//Portrait phones and down
+	@if $point == tiny-mobile {
+		@media (max-width: 400px) { @content; }
+	}
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }  
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }  
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}

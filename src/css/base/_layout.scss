@@ -1,0 +1,39 @@
+.wrapper {
+	max-width: 800px;
+	margin:0 auto;
+	background: $background;
+}
+
+footer {
+	padding: 10px;
+}
+
+div#input {
+	min-height: 75px;
+}
+
+section.forecast {
+	@include clearfix();
+}
+.day {
+	width: 14.28%;
+	padding: 10px;
+	float: left;
+}
+.chart {
+	margin-left: $chart-width/14;
+	margin-right: $chart-width/14;
+}
+
+.logo {
+	width: 50%;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+button#change {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
